@@ -1,0 +1,40 @@
+ 1 section .text
+ 2     global _start
+ 3         _start:
+ 4 ;создаём файл с правами на запись и чтение
+ 5     mov eax, 8
+ 6     mov ebx, filename
+ 7     mov ecx, 2
+ 8     int 0x80
+ 9 ;открываем
+10     mov eax,5
+11     mov ebx,filename
+12     mov ecx,1
+13     mov edx, 0
+14     int 0x80
+15 ;считываем с клавиатуры
+16     mov eax, 3
+17     mov ebx, 0
+18     mov ecx, buffer
+19     mov edx, 1024
+20     int 0x80
+21 ;записываем в файл из буфера
+22     mov eax, 4
+23     mov ebx, eax
+24     mov ecx, buffer
+25     mov edx, 1024
+26     int 0x80
+27 ;закрываем
+28     mov eax, 6
+29     int 0x80
+30
+31     mov ebx, 0
+32     mov eax, 1
+33     int 0x80
+34
+35     section .data
+36
+37     filename db "./my-file.txt", 0
+38     section .bss
+39     buffer: resb 1024
+

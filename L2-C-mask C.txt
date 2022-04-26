@@ -1,0 +1,27 @@
+1  #include <stdio.h>
+ 2    int main()  {
+ 3
+ 4    int a;
+ 5    int b;
+ 6    int c;
+ 7    int d;
+ 8    int a1;
+ 9    int b1;
+10    int c1;
+11    int d1;
+12    int a2;
+13    int b2;
+14    int c2;
+15    int d2;
+16
+17 scanf("%d.%d.%d.%d %d.%d.%d.%d" , &a, &b, &c, &d,  &a1, &b1, &c1, &d1 );
+18
+19    a2 = (a & a1);
+20    b2 = (b & b1);
+21    c2 = (c & c1);
+22    d2 = (d & d1);
+23
+24 printf( "%d.%d.%d.%d\n" , a2, b2, c2, d2 );
+25
+26    return 0;
+27                 }

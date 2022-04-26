@@ -1,0 +1,51 @@
+global _start
+
+section .text
+
+_start:
+
+	mov edi, num_array
+	mov ecx, edi
+	mov al, [edi]
+
+_cycle:
+	inc edi
+	cmp edi, num_array_end
+	jz _exit
+
+	cmp al, [edi]
+	jae _cycle
+
+	mov al, [edi]
+	mov ecx, edi
+	jmp _cycle
+
+
+_exit:
+	sub ecx, num_array
+	add [max + 4], cl	; записать в буфер одновременно конвертировав в char
+
+	; вывод на экран
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, max		; адрес буфера
+	mov edx, len_max	; длина буфера
+	int 80h
+
+	; выход
+	mov eax, 1
+	mov ebx, 0
+	int 80h
+
+
+section .data
+
+	; работают числа только от 0 до 255
+
+	num_array db 85, 24, 33, 48, 59, 61, 77, 155, 9, 0
+
+	num_array_end equ $
+
+	max db "max 0"
+
+	len_max equ $ - max

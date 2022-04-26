@@ -1,0 +1,21 @@
+#include <stdio.h>
+     int main()
+{
+     float x;
+     float y;
+     int R = 1;
+     puts ("введите координаты x и y");
+     scanf("%f" "%f" , &x, &y );
+
+     if (x*x + y*y > R*R || y > 0 && y < x - 2)
+      {
+     puts ("No");
+      }
+     else
+          {
+     puts ("Yes");
+          }
+
+
+   return 0;
+}

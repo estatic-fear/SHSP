@@ -1,0 +1,27 @@
+ 1 global _start
+ 2 section .text
+ 3
+ 4 _start:
+ 5 mov edi, 0
+ 6 _next:
+ 7 add byte [num_array + edi], 48
+ 8 mov edx, 1
+ 9 mov esi, num_array
+10 add esi, edi
+11 mov ecx, esi
+12 mov ebx, 1
+13 mov eax, 4
+14 int 0x80
+15
+16 inc edi
+17 cmp edi, 10
+18 jz _exit
+19 jmp _next
+20
+21 _exit:
+22 mov eax, 1
+23 mov ebx, 0
+24 int 0x80
+25
+26 section .data
+27 num_array db 1, 2, 3, 4, 5, 6, 7, 8, 9, 0

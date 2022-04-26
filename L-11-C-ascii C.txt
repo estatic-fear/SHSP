@@ -1,0 +1,12 @@
+ #include <stdio.h>
+
+  int main ()
+{
+  short t;
+  for ( int t = 33; t <= 126; t++)
+     {
+  printf ("%d    %c\n", t, t );
+     }
+
+ return 0;
+}

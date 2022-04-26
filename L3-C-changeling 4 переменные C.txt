@@ -1,0 +1,12 @@
+ 1 #include<stdio.h>
+ 2 int main()
+ 3 {
+ 4 char a,b,c,d;
+ 5 puts("Enter a word:");
+ 6 scanf("%c%c%c%c", &a, &b, &c, &d);
+ 7 puts("\n");
+ 8 puts("Changeling:");
+ 9 printf("%c%c%c%c", d, c, b, a);
+10 puts("\n");
+11 return 0;
+12 }
