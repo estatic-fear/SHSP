@@ -1,3 +1,5 @@
+;Вывод ASCII на экран
+
 global _start
 
 section .text

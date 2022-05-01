@@ -1,4 +1,7 @@
- #include <stdio.h>
+//Напишите программу,
+//которая вычисляет значение функции по графику.
+
+   #include <stdio.h>
    int main()  {
    float x;
    float y;
