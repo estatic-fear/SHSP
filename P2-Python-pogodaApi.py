@@ -1,3 +1,6 @@
+# потребуется установить pip и pyowm
+# sudo apt-get install python3-pip
+# pip install pyowm
 import pyowm # Для возможности проверять погоду в различных городах нашей планеты
 from pyowm.utils.config import get_default_config # метод необходимый для установки русского языка
 config_dict = get_default_config()  # получаем настройки библиотеки и ...
