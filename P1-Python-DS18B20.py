@@ -1,4 +1,4 @@
-# собирал в основном по ссылке, но без жк экрана: https://microkontroller.ru/raspberry-pi-projects/podklyuchenie-datchika-temperatury-ds18b20-k-raspberry-pi/
+# собирал для respberry в основном по ссылке, но без жк экрана: https://microkontroller.ru/raspberry-pi-projects/podklyuchenie-datchika-temperatury-ds18b20-k-raspberry-pi/
 tfile=open("/sys/bus/w1/devices/10-00080255f724/w1_slave") # id датчика DS18B20
 ttext=tfile.read()
 tfile.close()
