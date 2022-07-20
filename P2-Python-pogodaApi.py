@@ -29,7 +29,7 @@ elif 20 < temperature < 25:
 elif temperature > 25:
  fealing = 'жарко'
 
-# вывод
+# вывод (цветной)
 print("\033[36m"f'  В {city}е   {temperature} °C   {clouds}',"  ",fealing, "\n") # оставьте {city} вместо {city}e
 #print("\033[36m"f' In {city} now {temperature} °C     {clouds}', "   ", fealing, "\n")
 #print(w.sunrise_time(timeformat='iso')) # Prints time in GMT timezone
